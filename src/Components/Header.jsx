@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState} from 'react'
 
 const Header = (props) => {
-    function click(){
-        alert("button clicked")
-    }
     
+    const [count, setcount] = useState(0)
+    function click(){
+        setcount(count + 1)
+    }
+    const [king, setking] = useState("harsh")
+    function changeKing(){
+        setking("harshit")
+    }
   return (
     <div>
       <h1>hello from {props.name}</h1>
-      <button onClick={click}>Click me</button>
+      <p>Count: {count}</p>
+      <p> {king}</p>
+      <button onClick={changeKing}>Change King</button>
+       <button onClick={click}>Click me</button>
     </div>
   )
 }
