@@ -1,14 +1,11 @@
 import React from 'react';
+import Card from "./components/Card"
 
 function App() {
   return (
-    <div className="parent">
-      <div className="card">
-        <h1>harshit joshi</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button>view profile</button>
-        </div>
-    </div>
+   <div>
+    <Card name="harsh"/>
+   </div>
   );
 }
 
