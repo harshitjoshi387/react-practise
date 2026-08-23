@@ -11,4 +11,8 @@ body {
   color: white;
   font-family: 'Segoe UI', sans-serif;
 }
-
+ input,button{
+  padding:10px 20px;
+  margin:10px;
+  font-size: 15px;
+ }

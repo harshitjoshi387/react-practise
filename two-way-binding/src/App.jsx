@@ -1,8 +1,13 @@
 import React from 'react'
+import Login from './components/Login'
 
 const App = () => {
   return (
-    <div>two way binding</div>
+    <div>
+     
+    <Login />
+   
+    </div>
   )
 }
 
