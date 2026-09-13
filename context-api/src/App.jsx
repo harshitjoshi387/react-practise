@@ -1,20 +1,17 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+
+import Navbar from './components/Navbar'
+import { counterContext } from './context/context'
 
 const App = () => {
-  const [data, setdata] = useState('')
-
-  const getData = async () => {
-    const response = await axios.get("http://localhost:3000/data")
-    console.log(response.data)
-    setdata(response.data)
-  }
+  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <button onClick={getData}>click me</button>
-      <p>{JSON.stringify(data)}</p>
-    </div>
+    <counterContext.Provider value={{ count, setCount }}>
+      <div>
+        <Navbar></Navbar>
+      </div>
+    </counterContext.Provider>
   )
 }
 
